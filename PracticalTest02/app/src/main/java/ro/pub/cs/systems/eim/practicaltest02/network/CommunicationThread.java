@@ -100,7 +100,7 @@ public class CommunicationThread extends Thread {
                                     Log.i(Constants.TAG, "Format data error");
                                 }
                                 diff = d2.getTime() - d1.getTime();
-                                diffMinutes = diff / (60 * 1000);
+                                diffMinutes = diff /1000;
 
                             }
 
@@ -108,7 +108,7 @@ public class CommunicationThread extends Thread {
 
                         if (d2 != null) {
                             String result = null;
-                            if (diff < 60) {
+                            if (diffMinutes < 60) {
                                 result = "Error! You have to wait";
                             } else {
                                 result = d2.toString();
